@@ -1,0 +1,26 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+
+
+  font-family: sans-serif;
+  font-size: 15px;
+
+}
+
+
+.icon{
+ display: flex;
+  background-color: aqua;
+  border: 2px solid black;
+  width: 2px;
+  height: 9px;
+  font-size: x-small;
+  justify-content: center;
+  justify-items: center;
+}

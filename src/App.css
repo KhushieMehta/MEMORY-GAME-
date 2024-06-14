@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-items: center;
+    padding: 80px;
+
+}
+
+
+svg{
+    padding: 5px;;
+    width: 50px;
+     height: 50px;
+  }
+
+  .board {
+    border: 1px solid #DEDEDE;
+    padding: 12px;
+    box-shadow: 0 0 4px 4px #DEDEDE;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: stretch;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 390px;
+    height: 390px;
+    perspective: 100%;
+    max-width: 720px;
+    background-image: linear-gradient( rgba(96,221,142,1),rgba(24,138,141,1));;
+  }
+
+  .is-flipped {
+    transform: rotateY(180deg);
+  }
+
+.backcard
+{
+  position: absolute;
+   /* background: #F6FCB4; */
+    backface-visibility: hidden;
+    width: 70px;
+    height:70px;
+    transform: rotateY(180deg);
+    font-size:small;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient( rgba(96,221,142,1) rgba(24,138,141,1));
+   border :2px solid royalblue;
+
+
+}
+.frontcard{
+
+  position: absolute;
+
+    backface-visibility: hidden;
+    background-color: #C4B3A9;
+
+}
+.wrapper{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: .25rem;
+    background-color: #08302E;
+    transform-style: preserve-3d;
+    transition: 150ms;
+    cursor: pointer;
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
+    flex-direction: column;
+    border :2px solid #C4B3A9;
+    width: 76px;
+    height:76px;
+    color:white;
+    gap:1rem;
+
+}
+.wrapper:hover {
+      --translate-y: -2px;
+    }
+    .wrapper.flip {
+    --rotate-y: 180deg;
+  }
+  .wrapper.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+  .wrapper.is-inactive {
+    --rotate-y: 180deg;
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
+    background: #F6FCB4;
+    visibility: visible;
+  }
+
+
+
+  .hidden{
+    display: none;
+  }
+  /* NAVBAR- css */
+
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: center;
+    width:100%;
+    justify-content: center;
+
+  }
+
+  .status{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap:1rem;
+    padding: 20px
+  }
+  .resultBoard{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .result{
+    display: flex;
+    justify-content: center;
+
+
+  }
+  .restart{
+    background-color: #297142;
+    color: white;
+    padding: 6px;
+    width:6rem;
+
+  }
+
+
+
+
